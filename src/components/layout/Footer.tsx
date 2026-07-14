@@ -1,0 +1,118 @@
+import { memo } from "react";
+import { Instagram, Linkedin, Facebook } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+
+export const Footer = memo(function Footer() {
+  return (
+    <footer className="relative border-t border-forest/10 bg-forest-deep text-primary-foreground">
+      <div className="container-luxe grid gap-16 py-24 md:grid-cols-4 md:gap-24 md:py-32">
+        <div className="md:col-span-2">
+          <div className="flex items-center gap-2 opacity-90">
+            <span
+              aria-hidden
+              className="grid h-10 w-10 place-items-center border border-gold/40 bg-gradient-to-br from-forest to-forest-deep"
+            >
+              <span className="font-display text-[15px] text-gold">N</span>
+            </span>
+            <span className="flex items-baseline gap-1">
+              <span className="font-display text-[1.75rem] tracking-tight text-white">
+                Nexus
+              </span>
+              <span className="font-display text-[1.75rem] font-light tracking-tight text-gold">
+                Lands
+              </span>
+            </span>
+          </div>
+          <p className="mt-8 max-w-sm text-pretty text-[15px] leading-[1.8] text-white/70">
+            Premium land consultancy based in Mysore. Helping landowners unlock
+            true value through Joint Development, Joint Ventures and strategic
+            property sales.
+          </p>
+          <div className="mt-10 flex items-center gap-4">
+            {[
+              { Icon: Instagram, label: "Instagram" },
+              { Icon: Linkedin, label: "LinkedIn" },
+              { Icon: Facebook, label: "Facebook" },
+            ].map(({ Icon, label }) => (
+              <a
+                key={label}
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`NexusLands on ${label}`}
+                className="flex h-11 w-11 items-center justify-center border border-white/10 text-white/70 transition-all duration-500 hover:border-gold hover:bg-gold hover:text-forest-deep"
+              >
+                <Icon className="h-4 w-4" strokeWidth={1.5} />
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <div className="text-[10px] uppercase tracking-[0.25em] text-gold">
+            Navigation
+          </div>
+          <ul className="mt-6 space-y-4">
+            {[
+              { href: "/about", label: "About Firm" },
+              { href: "/services", label: "Expertise" },
+              { href: "/faq", label: "FAQ" },
+            ].map((l) => (
+              <li key={l.href}>
+                <Link
+                  to={l.href}
+                  className="text-[14px] leading-none text-white/70 transition-colors hover:text-white"
+                >
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <div className="text-[10px] uppercase tracking-[0.25em] text-gold">
+            Contact
+          </div>
+          <ul className="mt-6 space-y-4 text-[14px] leading-relaxed text-white/70">
+            <li>
+              <a
+                href="mailto:hello@nexuslands.in"
+                className="transition-colors hover:text-white"
+              >
+                hello@nexuslands.in
+              </a>
+            </li>
+            <li>
+              <a
+                href="tel:+919000000000"
+                className="transition-colors hover:text-white"
+              >
+                +91 90000 00000
+              </a>
+            </li>
+            <li className="pt-2">Jayalakshmipuram, Mysore</li>
+            <li>Karnataka 570012, India</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-white/5 py-8">
+        <div className="container-luxe flex flex-col items-center justify-between gap-4 sm:flex-row text-[12px] text-white/50 tracking-wide">
+          <p>© {new Date().getFullYear()} NexusLands. All rights reserved.</p>
+          <div className="flex gap-6">
+            <Link to="/legal/privacy" className="transition-colors hover:text-white">
+              Privacy Policy
+            </Link>
+            <Link to="/legal/terms" className="transition-colors hover:text-white">
+              Terms of Service
+            </Link>
+            <Link to="/legal/disclaimer" className="transition-colors hover:text-white">
+              Disclaimer
+            </Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+});
