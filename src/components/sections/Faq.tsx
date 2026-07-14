@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import { MessageCircle, Minus, Plus } from "lucide-react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { WA_URL } from "@/lib/constants";
+import aerialImg from "@/assets/images/aerial.png";
 
 export function Faq() {
   const items = [
@@ -89,7 +90,7 @@ export function Faq() {
             answers to the questions families ask us most.
           </p>
           <div className="mt-12 overflow-hidden rounded-sm border border-forest/10 shadow-soft">
-            <img src="/src/assets/images/aerial.png" alt="Premium plotted land aerial view" className="h-64 w-full object-cover transition-transform duration-700 hover:scale-105" />
+            <img src={aerialImg} alt="Premium plotted land aerial view" className="h-64 w-full object-cover transition-transform duration-700 hover:scale-105" />
           </div>
           <a
             href={WA_URL}

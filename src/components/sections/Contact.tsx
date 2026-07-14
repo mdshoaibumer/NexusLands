@@ -11,6 +11,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Field } from "@/components/ui/Field";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { WA_URL, WHATSAPP_NUMBER } from "@/lib/constants";
+import teamImg from "@/assets/images/team.png";
 
 function ContactRow({
   icon: Icon,
@@ -95,7 +96,7 @@ export function Contact() {
           </div>
 
           <div className="mt-14 overflow-hidden rounded-sm border border-forest/10 shadow-soft">
-            <img src="/src/assets/images/team.png" alt="NexusLands advisory team in office" className="h-72 w-full object-cover transition-transform duration-700 hover:scale-105" />
+            <img src={teamImg} alt="NexusLands advisory team in office" className="h-72 w-full object-cover transition-transform duration-700 hover:scale-105" />
           </div>
         </Reveal>
 
