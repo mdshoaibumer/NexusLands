@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
 import { ArrowRight, Star } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import heroImg from "@/assets/images/hero.jpg";
@@ -12,6 +12,7 @@ export function Hero() {
   });
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
   const overlay = useTransform(scrollYProgress, [0, 1], [0.55, 0.85]);
+  const prefersReducedMotion = useReducedMotion();
 
   return (
     <section
@@ -37,9 +38,9 @@ export function Hero() {
 
       <div className="container-luxe relative z-10 flex min-h-[100dvh] flex-col justify-center pt-28 pb-28 sm:pt-32">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: prefersReducedMotion ? 0.4 : 1.4, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-3xl"
         >
           <div className="mb-8 inline-flex items-center gap-4 rounded-sm border border-white/20 bg-white/5 px-5 py-2 text-[10px] uppercase tracking-[0.25em] text-white/90 backdrop-blur-md">

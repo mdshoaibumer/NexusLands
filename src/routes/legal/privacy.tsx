@@ -47,7 +47,7 @@ function PrivacyPolicy() {
 
           <h2>5. Contact Us</h2>
           <p>
-            If you have any questions regarding this Privacy Policy, please contact us at <a href="mailto:hello@nexuslands.in">hello@nexuslands.in</a>.
+            If you have any questions regarding this Privacy Policy, please contact us at <a href="mailto:support@nexuslands.in">support@nexuslands.in</a>.
           </p>
           <p className="mt-8 text-sm text-muted-foreground">
             Last Updated: {new Date().toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' })}

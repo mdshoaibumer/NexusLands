@@ -34,21 +34,24 @@ export function Nav() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
         scrolled
-          ? "border-b border-forest/10 bg-background/90 backdrop-blur-3xl py-4 shadow-sm"
+          ? "border-b border-forest/10 bg-white/90 backdrop-blur-3xl py-4 shadow-sm"
           : "bg-transparent py-6"
       }`}
     >
       <div className="container-luxe grid grid-cols-[auto_1fr_auto] items-center gap-4">
         <Link
           to="/"
-          className="flex items-center gap-2"
+          className="flex items-center gap-3"
           aria-label="NexusLands home"
         >
           <img
             src={logoImg}
-            alt="NexusLands"
+            alt="NexusLands Logo"
             className="h-10 w-auto object-contain sm:h-12"
           />
+          <span className="font-display text-xl font-medium tracking-tight text-forest-deep sm:text-2xl">
+            NexusLands
+          </span>
         </Link>
         <nav className="hidden justify-center gap-10 lg:flex">
           {links.map((l) => (
@@ -72,7 +75,7 @@ export function Nav() {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="grid h-11 w-11 place-items-center rounded-full border border-forest/15 bg-background/70 text-forest-deep backdrop-blur md:hidden"
+            className="grid h-11 w-11 place-items-center rounded-full border border-forest/15 bg-white/90 text-forest-deep backdrop-blur md:hidden"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -87,7 +90,7 @@ export function Nav() {
           pointerEvents: open ? "auto" : "none",
         }}
         transition={{ duration: 0.3 }}
-        className="fixed inset-0 top-[68px] z-40 bg-background/98 backdrop-blur-2xl md:hidden"
+        className="fixed inset-0 top-[68px] z-40 bg-white/98 backdrop-blur-2xl md:hidden"
       >
         <div className="container-luxe flex h-full flex-col justify-between py-10">
           <nav className="flex flex-col gap-1">

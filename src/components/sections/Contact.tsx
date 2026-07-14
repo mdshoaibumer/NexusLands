@@ -27,7 +27,7 @@ function ContactRow({
         <Icon className="h-4 w-4" strokeWidth={1.6} />
       </div>
       <div className="min-w-0">
-        <div className="text-[10px] uppercase tracking-[0.26em] text-gold">
+        <div className="text-[10px] uppercase tracking-[0.26em] text-forest">
           {label}
         </div>
         <div className="mt-1.5 text-[14.5px] leading-relaxed text-forest-deep md:text-base">
@@ -59,18 +59,16 @@ export function Contact() {
 
           <div className="mt-14 space-y-8">
             <ContactRow icon={MapPin} label="Office">
-              NexusLands Advisory
+              335, 3rd Cross, B Zone, Sathgalli
               <br />
-              Jayalakshmipuram, Mysore
-              <br />
-              Karnataka 570012, India
+              Mysore, Karnataka 570019
             </ContactRow>
             <ContactRow icon={Phone} label="Phone">
               <a
-                href="tel:+919000000000"
+                href="tel:+919902322345"
                 className="transition-colors hover:text-gold"
               >
-                +91 90000 00000
+                +91 99023 22345
               </a>
             </ContactRow>
             <ContactRow icon={MessageCircle} label="WhatsApp">
@@ -85,10 +83,10 @@ export function Contact() {
             </ContactRow>
             <ContactRow icon={Mail} label="Email">
               <a
-                href="mailto:hello@nexuslands.in"
+                href="mailto:support@nexuslands.in"
                 className="transition-colors hover:text-gold"
               >
-                hello@nexuslands.in
+                support@nexuslands.in
               </a>
             </ContactRow>
             <ContactRow icon={Clock} label="Business Hours">
@@ -114,19 +112,21 @@ export function Contact() {
               const text = encodeURIComponent(
                 `Hello NexusLands,\n\nMy name is ${name}.\nProperty: ${property}\n\n${msg}`,
               );
-              window.open(
-                `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`,
-                "_blank",
-                "noopener,noreferrer"
-              );
               setStatus("sent");
-              form.reset();
-              setTimeout(() => setStatus(null), 3000);
+              setTimeout(() => {
+                window.open(
+                  `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`,
+                  "_blank",
+                  "noopener,noreferrer"
+                );
+                form.reset();
+                setTimeout(() => setStatus(null), 2000);
+              }, 1500);
             }}
             className="rounded-sm border border-forest/10 bg-card p-8 shadow-elegant sm:p-14"
           >
             <div className="mb-12">
-              <div className="text-[10px] uppercase tracking-[0.25em] text-gold">
+              <div className="text-[10px] uppercase tracking-[0.25em] text-forest">
                 Property Evaluation
               </div>
               <div className="mt-4 font-display text-[2rem] leading-tight tracking-tight text-forest-deep">
@@ -158,7 +158,7 @@ export function Contact() {
                 type="submit"
                 className="group mt-6 inline-flex items-center justify-center gap-3 rounded-sm bg-forest px-10 py-4 text-[14px] font-medium uppercase tracking-[0.08em] text-primary-foreground transition-all duration-700 hover:bg-forest-deep focus-visible:ring-2 focus-visible:ring-gold"
               >
-                {status === "sent" ? "Opening WhatsApp…" : "Request Evaluation"}
+                {status === "sent" ? "Redirecting to WhatsApp..." : "Request Evaluation"}
                 <ArrowRight className="h-4 w-4 transition-transform duration-700 group-hover:translate-x-1.5" />
               </button>
               <p className="text-center text-[13px] text-muted-foreground">

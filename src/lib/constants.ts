@@ -1,4 +1,4 @@
-export const WHATSAPP_NUMBER = "919000000000";
+export const WHATSAPP_NUMBER = "919902322345";
 
 export const WHATSAPP_MSG = encodeURIComponent(
   "Hello NexusLands,\n\nI would like a consultation regarding my property.",

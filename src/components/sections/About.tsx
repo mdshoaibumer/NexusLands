@@ -20,8 +20,8 @@ export function About() {
                 className="aspect-[4/5] h-full w-full object-cover grayscale-[20%] transition-transform duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.03] sm:aspect-[4/3] lg:aspect-[4/5]"
               />
             </div>
-            <div className="mt-8 rounded-sm border border-forest/10 bg-card p-6 shadow-soft sm:absolute sm:-bottom-12 sm:-right-8 sm:mt-0 sm:max-w-[280px] sm:p-8">
-              <div className="text-[10px] uppercase tracking-[0.25em] text-gold">
+            <div className="mt-8 rounded-sm border border-forest/10 bg-card p-6 shadow-soft lg:absolute lg:-bottom-12 lg:-right-8 lg:mt-0 lg:max-w-[280px] lg:p-8">
+              <div className="text-[10px] uppercase tracking-[0.25em] text-forest">
                 Based in
               </div>
               <div className="mt-2 font-display text-[1.5rem] leading-tight tracking-tight text-forest-deep">

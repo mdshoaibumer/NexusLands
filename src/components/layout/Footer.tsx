@@ -1,4 +1,5 @@
 import { memo } from "react";
+import logoImg from "@/assets/images/logo.png";
 import { Instagram, Linkedin, Facebook } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
@@ -7,21 +8,17 @@ export const Footer = memo(function Footer() {
     <footer className="relative border-t border-forest/10 bg-forest-deep text-primary-foreground">
       <div className="container-luxe grid gap-16 py-24 md:grid-cols-4 md:gap-24 md:py-32">
         <div className="md:col-span-2">
-          <div className="flex items-center gap-2 opacity-90">
-            <span
-              aria-hidden
-              className="grid h-10 w-10 place-items-center border border-gold/40 bg-gradient-to-br from-forest to-forest-deep"
-            >
-              <span className="font-display text-[15px] text-gold">N</span>
-            </span>
-            <span className="flex items-baseline gap-1">
-              <span className="font-display text-[1.75rem] tracking-tight text-white">
-                Nexus
+          <div className="flex items-center gap-3 opacity-90">
+            <Link to="/" aria-label="NexusLands home" className="flex items-center gap-3">
+              <img
+                src={logoImg}
+                alt="NexusLands Logo"
+                className="h-12 w-auto rounded bg-white/5 p-1 object-contain sm:h-14"
+              />
+              <span className="font-display text-2xl font-medium tracking-tight text-white">
+                NexusLands
               </span>
-              <span className="font-display text-[1.75rem] font-light tracking-tight text-gold">
-                Lands
-              </span>
-            </span>
+            </Link>
           </div>
           <p className="mt-8 max-w-sm text-pretty text-[15px] leading-[1.8] text-white/70">
             Premium land consultancy based in Mysore. Helping landowners unlock
@@ -77,22 +74,22 @@ export const Footer = memo(function Footer() {
           <ul className="mt-6 space-y-4 text-[14px] leading-relaxed text-white/70">
             <li>
               <a
-                href="mailto:hello@nexuslands.in"
+                href="mailto:support@nexuslands.in"
                 className="transition-colors hover:text-white"
               >
-                hello@nexuslands.in
+                support@nexuslands.in
               </a>
             </li>
             <li>
               <a
-                href="tel:+919000000000"
+                href="tel:+919902322345"
                 className="transition-colors hover:text-white"
               >
-                +91 90000 00000
+                +91 99023 22345
               </a>
             </li>
-            <li className="pt-2">Jayalakshmipuram, Mysore</li>
-            <li>Karnataka 570012, India</li>
+            <li className="pt-2">335, 3rd Cross, B Zone, Sathgalli</li>
+            <li>Mysore, Karnataka 570019</li>
           </ul>
         </div>
       </div>
