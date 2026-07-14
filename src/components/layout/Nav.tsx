@@ -31,13 +31,14 @@ export function Nav() {
   ];
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-        scrolled
-          ? "border-b border-forest/10 bg-white/90 backdrop-blur-3xl py-4 shadow-sm"
-          : "bg-transparent py-6"
-      }`}
-    >
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          scrolled
+            ? "border-b border-forest/10 bg-white/90 backdrop-blur-3xl py-4 shadow-sm"
+            : "bg-transparent py-6"
+        }`}
+      >
       <div className="container-luxe grid grid-cols-[auto_1fr_auto] items-center gap-4">
         <Link
           to="/"
@@ -80,7 +81,7 @@ export function Nav() {
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
-      </div>
+      </header>
 
       {/* Mobile full-screen menu */}
       <motion.div
@@ -95,7 +96,7 @@ export function Nav() {
         <div className="container-luxe flex h-full flex-col justify-between pb-10 pt-[104px]">
           <nav className="flex flex-col gap-1">
             {links.map((l, i) => (
-              <motion.div
+               <motion.div
                 key={l.to}
                 initial={{ opacity: 0, x: -12 }}
                 animate={{ opacity: open ? 1 : 0, x: open ? 0 : -12 }}
@@ -129,6 +130,6 @@ export function Nav() {
           </div>
         </div>
       </motion.div>
-    </header>
+    </>
   );
 }
