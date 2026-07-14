@@ -90,9 +90,9 @@ export function Nav() {
           pointerEvents: open ? "auto" : "none",
         }}
         transition={{ duration: 0.3 }}
-        className="fixed inset-0 top-[68px] z-40 bg-white/98 backdrop-blur-2xl md:hidden"
+        className="fixed inset-0 z-40 bg-white/98 backdrop-blur-2xl md:hidden"
       >
-        <div className="container-luxe flex h-full flex-col justify-between py-10">
+        <div className="container-luxe flex h-full flex-col justify-between pb-10 pt-[104px]">
           <nav className="flex flex-col gap-1">
             {links.map((l, i) => (
               <motion.div
