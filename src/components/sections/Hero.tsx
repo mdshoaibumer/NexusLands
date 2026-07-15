@@ -32,9 +32,9 @@ export function Hero() {
       </motion.div>
       <motion.div
         style={{ opacity: overlay }}
-        className="absolute inset-0 bg-gradient-to-b from-forest-deep/70 via-forest-deep/45 to-background"
+        className="absolute inset-0 bg-gradient-to-b from-forest-deep/90 via-forest-deep/60 to-background"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-forest-deep/70 via-forest-deep/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-forest-deep/90 via-forest-deep/40 to-transparent" />
 
       <div className="container-luxe relative z-10 flex min-h-[100dvh] flex-col justify-center pt-28 pb-28 sm:pt-32">
         <motion.div
@@ -55,7 +55,7 @@ export function Hero() {
           </h1>
           <p className="mt-6 max-w-xl text-[16.5px] leading-[1.8] text-white/80 text-pretty md:text-lg md:leading-[1.75]">
             We partner with landowners across Karnataka to structure fair,
-            transparent, and highly profitable Joint Developments and outright
+            transparent, and highly profitable Joint Developments, Joint Ventures, and outright
             sales. Your interests always come first.
           </p>
 
@@ -93,6 +93,10 @@ export function Hero() {
 
       <motion.a
         href="#trust"
+        onClick={(e) => {
+          e.preventDefault();
+          document.querySelector("#trust")?.scrollIntoView({ behavior: "smooth" });
+        }}
         aria-label="Scroll to next section"
         animate={{ opacity: [0.3, 1, 0.3] }}
         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}

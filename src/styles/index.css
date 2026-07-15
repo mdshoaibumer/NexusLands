@@ -37,7 +37,7 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 
   --shadow-elegant: 0 40px 80px -20px
@@ -95,7 +95,6 @@
     border-color: var(--color-border);
   }
   html {
-    scroll-behavior: smooth;
     scroll-padding-top: 5rem;
     -webkit-text-size-adjust: 100%;
   }
@@ -117,10 +116,10 @@
     font-optical-sizing: auto;
   }
   h1 {
-    font-variation-settings: "opsz" 144;
+    font-weight: 500;
   }
   h2 {
-    font-variation-settings: "opsz" 96;
+    font-weight: 500;
   }
   ::selection {
     background: var(--gold);

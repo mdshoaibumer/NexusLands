@@ -39,7 +39,7 @@ export function Nav() {
             : "bg-transparent py-6"
         }`}
       >
-      <div className="container-luxe grid grid-cols-[auto_1fr_auto] items-center gap-4">
+      <div className="container-luxe flex items-center justify-between gap-4 lg:grid lg:grid-cols-[auto_1fr_auto]">
         <Link
           to="/"
           className="flex items-center gap-3"
@@ -48,9 +48,9 @@ export function Nav() {
           <img
             src={logoImg}
             alt="NexusLands Logo"
-            className="h-10 w-auto object-contain sm:h-12"
+            className="h-10 w-auto object-contain sm:h-12 transition-all duration-500"
           />
-          <span className="font-display text-xl font-medium tracking-tight text-forest-deep sm:text-2xl">
+          <span className={`font-display text-xl font-medium tracking-tight sm:text-2xl transition-colors duration-500 ${scrolled ? "text-forest-deep" : "text-white"}`}>
             NexusLands
           </span>
         </Link>
@@ -59,7 +59,7 @@ export function Nav() {
             <Link
               key={l.to}
               to={l.to}
-              className="gold-underline text-[11px] font-medium uppercase tracking-[0.2em] text-forest-deep/80 transition-colors duration-500 hover:text-forest-deep [&.active]:text-gold [&.active]:bg-[length:100%_1px]"
+              className={`gold-underline text-[11px] font-medium uppercase tracking-[0.2em] transition-colors duration-500 [&.active]:text-gold [&.active]:bg-[length:100%_1px] ${scrolled ? "text-forest-deep/80 hover:text-forest-deep" : "text-white/80 hover:text-white"}`}
             >
               {l.label}
             </Link>
@@ -68,7 +68,7 @@ export function Nav() {
         <div className="flex items-center gap-4">
           <Link
             to="/contact"
-            className="hidden min-h-10 items-center rounded-full bg-forest px-5 py-2.5 text-[12px] font-medium tracking-wide text-primary-foreground transition-all duration-500 hover:bg-gold hover:text-gold-foreground hover:shadow-gold md:inline-flex"
+            className={`hidden min-h-10 items-center rounded-full px-5 py-2.5 text-[12px] font-medium tracking-wide transition-all duration-500 hover:bg-gold hover:text-gold-foreground hover:shadow-gold md:inline-flex ${scrolled ? "bg-forest text-primary-foreground" : "bg-white text-forest-deep"}`}
           >
             Talk to Our Experts
           </Link>
@@ -76,7 +76,7 @@ export function Nav() {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="grid h-11 w-11 place-items-center rounded-full border border-forest/15 bg-white/90 text-forest-deep backdrop-blur md:hidden"
+            className={`grid h-11 w-11 place-items-center rounded-full border backdrop-blur md:hidden transition-all duration-500 ${scrolled ? "border-forest/15 bg-white/90 text-forest-deep" : "border-white/20 bg-white/10 text-white"}`}
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
