@@ -56,7 +56,7 @@ export function Process() {
                       i % 2 === 0 ? "md:text-right md:pr-16" : "md:pl-16"
                     }
                   >
-                    <div className="font-display text-[11px] uppercase tracking-[0.25em] text-gold">
+                    <div className="font-display text-[11px] uppercase tracking-[0.25em] text-gold-dark">
                       Phase {s.n}
                     </div>
                     <h3 className="mt-4 font-display text-[1.75rem] leading-tight tracking-tight text-forest-deep sm:text-[2rem]">
@@ -67,7 +67,7 @@ export function Process() {
                     </p>
                   </div>
                   <div className="absolute left-0 top-0 flex h-14 w-14 items-center justify-center bg-background md:left-1/2 md:h-16 md:w-16 md:-translate-x-1/2">
-                    <span className="font-display text-2xl text-forest/40">
+                    <span className="font-display text-2xl text-forest/80">
                       {s.n}
                     </span>
                   </div>

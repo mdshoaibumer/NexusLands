@@ -59,7 +59,7 @@ export function Nav() {
             <Link
               key={l.to}
               to={l.to}
-              className={`gold-underline text-[11px] font-medium uppercase tracking-[0.2em] transition-colors duration-500 [&.active]:text-gold [&.active]:bg-[length:100%_1px] ${scrolled ? "text-forest-deep/80 hover:text-forest-deep" : "text-white/80 hover:text-white"}`}
+              className={`gold-underline text-[11px] font-medium uppercase tracking-[0.2em] transition-colors duration-500 [&.active]:text-gold-dark [&.active]:bg-[length:100%_1px] ${scrolled ? "text-forest-deep/80 hover:text-forest-deep" : "text-white/80 hover:text-white"}`}
             >
               {l.label}
             </Link>
@@ -76,7 +76,7 @@ export function Nav() {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className={`grid h-11 w-11 place-items-center rounded-full border backdrop-blur md:hidden transition-all duration-500 ${scrolled ? "border-forest/15 bg-white/90 text-forest-deep" : "border-white/20 bg-white/10 text-white"}`}
+            className={`grid h-11 w-11 place-items-center rounded-full border backdrop-blur lg:hidden transition-all duration-500 ${scrolled ? "border-forest/15 bg-white/90 text-forest-deep" : "border-white/20 bg-white/10 text-white"}`}
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -86,13 +86,15 @@ export function Nav() {
 
       {/* Mobile full-screen menu */}
       <motion.div
+        role="region"
+        aria-label="Mobile navigation overlay"
         initial={false}
         animate={{
           opacity: open ? 1 : 0,
           pointerEvents: open ? "auto" : "none",
         }}
         transition={{ duration: 0.3 }}
-        className="fixed inset-0 z-40 bg-white/98 backdrop-blur-2xl md:hidden"
+        className="fixed inset-0 z-40 bg-white/98 backdrop-blur-2xl lg:hidden"
       >
         <div className="container-luxe flex h-full flex-col justify-between pb-10 pt-[104px]">
           <nav className="flex flex-col gap-1">
@@ -109,10 +111,10 @@ export function Nav() {
                 <Link
                   to={l.to}
                   onClick={() => setOpen(false)}
-                  className="flex items-center justify-between border-b border-forest/10 py-5 font-display text-2xl text-forest-deep [&.active]:text-gold"
+                  className="flex items-center justify-between border-b border-forest/10 py-5 font-display text-2xl text-forest-deep [&.active]:text-gold-dark"
                 >
                   <span>{l.label}</span>
-                  <ArrowUpRight className="h-5 w-5 text-gold" />
+                  <ArrowUpRight className="h-5 w-5 text-gold-dark" />
                 </Link>
               </motion.div>
             ))}
@@ -125,7 +127,7 @@ export function Nav() {
             >
               Book Free Consultation <ArrowRight className="h-4 w-4" />
             </Link>
-            <div className="text-center text-xs uppercase tracking-[0.28em] text-forest/60">
+            <div className="text-center text-xs uppercase tracking-[0.28em] text-forest/80">
               Mysore · Karnataka
             </div>
           </div>

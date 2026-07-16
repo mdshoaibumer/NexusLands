@@ -34,7 +34,7 @@ export function WhySection() {
             <SectionLabel>Our Promise</SectionLabel>
           </div>
           <h2 className="mt-8 text-balance font-display text-[2.5rem] leading-[1.05] tracking-tight text-forest-deep sm:text-5xl md:text-[4rem]">
-            Why landowners <em className="text-gold not-italic">trust</em>{" "}
+            Why landowners <em className="text-gold-dark not-italic">trust</em>{" "}
             NexusLands.
           </h2>
           <p className="mt-8 text-pretty text-[16px] leading-[1.8] text-muted-foreground md:text-[17px]">
@@ -47,10 +47,10 @@ export function WhySection() {
           {features.map((c, i) => (
             <Reveal key={c.title} delay={i * 0.1}>
               <div className="group relative flex h-full flex-col">
-                <div className="mb-6 inline-flex text-forest transition-colors duration-700 group-hover:text-gold">
+                <div className="mb-6 inline-flex text-forest transition-colors duration-700 group-hover:text-gold-dark">
                   <c.icon className="h-8 w-8" strokeWidth={1.2} />
                 </div>
-                <div className="font-display text-[11px] uppercase tracking-[0.25em] text-gold/60 mb-4">
+                <div className="font-display text-[11px] uppercase tracking-[0.25em] text-gold-dark/60 mb-4">
                   0{i + 1}
                 </div>
                 <h3 className="font-display text-[1.5rem] leading-tight tracking-tight text-forest-deep sm:text-[1.75rem]">

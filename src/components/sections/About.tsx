@@ -65,7 +65,7 @@ export function About() {
             <div className="mt-12 flex items-center gap-8">
               <Link
                 to="/about"
-                className="gold-underline inline-flex items-center gap-2 pb-1 text-[11px] font-bold uppercase tracking-[0.2em] text-forest-deep transition-colors hover:text-gold"
+                className="gold-underline inline-flex items-center gap-2 pb-1 text-[11px] font-bold uppercase tracking-[0.2em] text-forest-deep transition-colors hover:text-gold-dark"
               >
                 Read Our Full Story <ArrowUpRight className="h-4 w-4" />
               </Link>

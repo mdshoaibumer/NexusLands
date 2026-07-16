@@ -11,7 +11,7 @@ export const TrustBar = memo(function TrustBar() {
               Trusted by families and landowners across Karnataka
             </p>
             <div className="h-px w-12 bg-gold/50 sm:h-8 sm:w-px" />
-            <div className="flex flex-wrap items-center justify-center gap-6 text-[11px] uppercase tracking-[0.2em] text-forest-deep/60 sm:gap-10">
+            <div className="flex flex-wrap items-center justify-center gap-6 text-[11px] uppercase tracking-[0.2em] text-forest-deep/80 sm:gap-10">
               <span>Transparent Agreements</span>
               <span>Fair Valuations</span>
               <span>Verified Developers</span>

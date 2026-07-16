@@ -64,10 +64,10 @@ export function Services() {
           {services.map((s, i) => (
             <Reveal key={s.title} delay={i * 0.15}>
               <div className="group relative flex h-full flex-col overflow-hidden rounded-sm border border-forest/10 bg-card p-10 transition-all duration-[1200ms] hover:border-gold/30 hover:shadow-elegant">
-                <div className="absolute right-10 top-10 font-display text-[13px] tracking-[0.25em] text-gold/60">
+                <div className="absolute right-10 top-10 font-display text-[13px] tracking-[0.25em] text-gold-dark/60">
                   {s.tag}
                 </div>
-                <div className="mb-10 inline-flex h-14 w-14 items-center justify-center rounded-sm bg-forest-deep text-gold shadow-sm transition-all duration-700 group-hover:bg-gold group-hover:text-forest-deep">
+                <div className="mb-10 inline-flex h-14 w-14 items-center justify-center rounded-sm bg-forest-deep text-gold-dark shadow-sm transition-all duration-700 group-hover:bg-gold group-hover:text-forest-deep">
                   <s.icon className="h-6 w-6" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-display text-[1.75rem] leading-[1.1] tracking-tight text-forest-deep">
@@ -89,7 +89,7 @@ export function Services() {
                 </ul>
                 <Link
                   to={s.to}
-                  className="mt-10 inline-flex items-center gap-3 self-start text-[11px] font-medium uppercase tracking-[0.25em] text-forest transition-all duration-700 hover:gap-4 hover:text-gold"
+                  className="mt-10 inline-flex items-center gap-3 self-start text-[11px] font-medium uppercase tracking-[0.25em] text-forest transition-all duration-700 hover:gap-4 hover:text-gold-dark"
                 >
                   Explore Service <ArrowUpRight className="h-4 w-4" />
                 </Link>

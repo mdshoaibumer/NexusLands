@@ -13,7 +13,7 @@ import { Analytics } from "@/components/shared/Analytics";
 function NotFoundComponent() {
   return (
     <div className="flex min-h-[100dvh] flex-col items-center justify-center bg-cream px-4 text-center">
-      <div className="text-[10px] uppercase tracking-[0.25em] text-gold">Error 404</div>
+      <div className="text-[10px] uppercase tracking-[0.25em] text-gold-dark">Error 404</div>
       <h1 className="mt-6 font-display text-[3.5rem] leading-none tracking-tight text-forest-deep sm:text-[4.5rem]">
         Page not found
       </h1>
@@ -38,7 +38,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 
   return (
     <div className="flex min-h-[100dvh] flex-col items-center justify-center bg-cream px-4 text-center">
-      <div className="text-[10px] uppercase tracking-[0.25em] text-gold">System Error</div>
+      <div className="text-[10px] uppercase tracking-[0.25em] text-gold-dark">System Error</div>
       <h1 className="mt-6 font-display text-[2.5rem] leading-tight tracking-tight text-forest-deep sm:text-[3.5rem]">
         We encountered an issue
       </h1>
@@ -92,7 +92,9 @@ function RootComponent() {
           <Outlet />
         </main>
         <Footer />
-        <WhatsAppFloat />
+        <aside aria-label="Quick contact">
+          <WhatsAppFloat />
+        </aside>
         <Analytics />
       </div>
     </QueryClientProvider>

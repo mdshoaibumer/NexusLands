@@ -50,7 +50,7 @@ export function ServiceLayout({
             <div className="mt-16 grid gap-12 sm:grid-cols-2">
               {benefits.map((benefit, i) => (
                 <div key={i}>
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-forest/10 bg-forest/5 text-[11px] font-medium text-gold">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-forest/10 bg-forest/5 text-[11px] font-medium text-gold-dark">
                     0{i + 1}
                   </div>
                   <h3 className="mt-6 font-display text-xl text-forest-deep">

@@ -26,6 +26,7 @@
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-gold: var(--gold);
+  --color-gold-dark: var(--gold-dark);
   --color-gold-foreground: var(--gold-foreground);
   --color-forest: var(--forest);
   --color-forest-deep: var(--forest-deep);
@@ -75,8 +76,9 @@
   --accent: oklch(0.94 0.02 85);
   --accent-foreground: oklch(0.26 0.07 155);
 
-  /* Luxury Gold #C8A951 */
+  /* Luxury Gold */
   --gold: oklch(0.74 0.12 85);
+  --gold-dark: oklch(0.55 0.14 85);
   --gold-foreground: oklch(0.22 0.02 155);
 
   --cream: oklch(0.97 0.012 85);

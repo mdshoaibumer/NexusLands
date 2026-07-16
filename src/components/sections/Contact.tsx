@@ -67,7 +67,7 @@ export function Contact() {
             <ContactRow icon={Phone} label="Phone">
               <a
                 href="tel:+919902322345"
-                className="transition-colors hover:text-gold"
+                className="transition-colors hover:text-gold-dark"
               >
                 +91 99023 22345
               </a>
@@ -77,7 +77,7 @@ export function Contact() {
                 href={WA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors hover:text-gold"
+                className="transition-colors hover:text-gold-dark"
               >
                 Message us on WhatsApp
               </a>
@@ -85,7 +85,7 @@ export function Contact() {
             <ContactRow icon={Mail} label="Email">
               <a
                 href="mailto:support@nexuslands.in"
-                className="transition-colors hover:text-gold"
+                className="transition-colors hover:text-gold-dark"
               >
                 support@nexuslands.in
               </a>

@@ -109,15 +109,15 @@ export function Faq() {
               <div key={it.q} className="border-b border-forest/10">
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
-                  className="group flex w-full items-start justify-between gap-8 py-8 text-left transition-colors duration-500 hover:text-gold"
+                  className="group flex w-full items-start justify-between gap-8 py-8 text-left transition-colors duration-500 hover:text-gold-dark"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-display text-[1.25rem] leading-snug tracking-tight text-forest-deep sm:text-[1.5rem] group-hover:text-gold transition-colors duration-500">
+                  <span className="font-display text-[1.25rem] leading-snug tracking-tight text-forest-deep sm:text-[1.5rem] group-hover:text-gold-dark transition-colors duration-500">
                     {it.q}
                   </span>
                   <span
-                    className={`mt-1 flex h-6 w-6 shrink-0 items-center justify-center text-forest-deep transition-transform duration-[800ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:text-gold ${
-                      isOpen ? "rotate-180 text-gold" : ""
+                    className={`mt-1 flex h-6 w-6 shrink-0 items-center justify-center text-forest-deep transition-transform duration-[800ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:text-gold-dark ${
+                      isOpen ? "rotate-180 text-gold-dark" : ""
                     }`}
                   >
                     {isOpen ? (

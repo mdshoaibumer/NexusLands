@@ -37,7 +37,7 @@ export function Field({
           className="w-full border-b border-forest/20 bg-transparent py-4 text-[16px] text-forest-deep transition-colors placeholder:text-muted-foreground focus:border-gold focus:outline-none"
         />
       )}
-      <span className="pointer-events-none absolute left-0 top-3 text-[10px] uppercase tracking-[0.25em] text-muted-foreground transition-all peer-placeholder-shown:top-5 peer-placeholder-shown:text-[14px] peer-placeholder-shown:normal-case peer-placeholder-shown:tracking-normal peer-focus:top-3 peer-focus:text-[10px] peer-focus:uppercase peer-focus:tracking-[0.25em] peer-focus:text-gold">
+      <span className="pointer-events-none absolute left-0 top-3 text-[10px] uppercase tracking-[0.25em] text-muted-foreground transition-all peer-placeholder-shown:top-5 peer-placeholder-shown:text-[14px] peer-placeholder-shown:normal-case peer-placeholder-shown:tracking-normal peer-focus:top-3 peer-focus:text-[10px] peer-focus:uppercase peer-focus:tracking-[0.25em] peer-focus:text-gold-dark">
         {label}
       </span>
     </label>
